@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+<div class="login-container">
+    <div class="register-image-logo-container">
+        <img th:src="@{/images/apc-login-bg.png}" alt="Logo PUC Minas">
+    </div>
+    <div class="login-form">
+        <form th:action="@{/login}" method="post" class="login-form">
+            <h4 class="login-title">Crie sua conta</h4>
+            <input type="text" id="username" name="username" placeholder="Nome Completo" required>
+            <input type="email" id="email" name="email" placeholder="E-mail" required>
+            <input type="number" id="cpf" name="cpf" placeholder="CPF" required>
+            <input type="number" id="rg" name="rg" placeholder="RG" required>
+            <input type="text" id="endereco" name="endereco" placeholder="Endereço" required>
+            <input type="text" id="instituicao" name="instituicao" placeholder="Instituição"required>
+            <input type="password" id="senha" name="senha" placeholder="Senha"required>
+            <div class="login-button-container">
+                <button type="submit">Registrar</button>
+            </div>
+            <p class="login-redirect-options">
+                Já possui conta? | <a href="/login">Fazer login</a>
+            </p>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
